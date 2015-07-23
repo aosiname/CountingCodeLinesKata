@@ -4,13 +4,20 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
 <TestClass()> Public Class UnitTest1
 
+    Public theFile As String
+
+    <TestInitialize> Public Sub Setup()
+        theFile = "test"
+    End Sub
+
     <TestMethod()> Public Sub CheckFileExistsAndIsNotEmpty()
-        Dim theFile As String = "C:\Users\aosiname\Documents\Visual Studio 2013\Projects\CountingCodeLines\CountingCodeLines\code.txt"
+        'theFile = "C:\Users\aosiname\Documents\Visual Studio 2013\Projects\CountingCodeLines\CountingCodeLines\code.txt"
         Dim value As String = File.ReadAllText(theFile)
 
         File.Exists(theFile)
         Assert.IsTrue(value.Length > 0)
     End Sub
+
     <TestMethod()> Public Sub FindCarriageReturn()
         Dim numLines As Integer = 0
 
