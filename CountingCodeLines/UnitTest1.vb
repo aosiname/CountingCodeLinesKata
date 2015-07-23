@@ -7,7 +7,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
     Public theFile As String
 
     <TestInitialize> Public Sub Setup()
-        theFile = "test"
+        theFile = "..\..\code.txt"
     End Sub
 
     <TestMethod()> Public Sub CheckFileExistsAndIsNotEmpty()
