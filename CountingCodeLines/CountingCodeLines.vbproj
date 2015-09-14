@@ -117,7 +117,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="code.txt" />
+    <Content Include="bin\Debug\code.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
